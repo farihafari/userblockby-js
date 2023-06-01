@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="reg.css">
+</head>
+<body>
+<div class="con">
+    <input type="submit" value="logout" onclick="logout()">
+    <input type="submit" value="delete account" onclick="dlt()" style="width: 30%;">
+</div>
+<script type="module" >
+import {em,ps} from "./login.js"
+
+if(!em){
+  location.assign("login.html")
+}
+</script>
+
+<script>
+  if(!localStorage.getItem("lname")){
+    location.assign("registration.html")
+  }
+
+</script>
+
+</body>
+</html>

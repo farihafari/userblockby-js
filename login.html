@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="reg.css">
+
+</head>
+<body>
+<div class="con">
+<div class="group">
+    <div class="left">
+        <label for="">email</label>
+         <input type="email" id="e" autocomplete="on">
+    </div>
+    <div class="right">
+        <label for="">password</label>
+        <input type="password" id="p" autocomplete="on">
+    </div>
+    
+</div>
+<input type="submit" value="click"  id="btn">
+</div>
+<script src="reg.js"></script>
+<script type="module">
+import {login} from "./login.js"
+document.getElementById("btn").addEventListener("click",()=> login())
+
+
+</script>
+<script>
+    if(!localStorage.getItem("fname")){
+    location.assign("registration.html")
+}
+</script>
+
+</body>
+</html>
