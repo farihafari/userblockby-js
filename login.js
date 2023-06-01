@@ -4,17 +4,12 @@ let sem= localStorage.getItem("email");
 let sps= localStorage.getItem("password");
  function login(){
   
-   if(em.value && ps.value){
-    if(em.value==sem && ps.value==sps){
-        window.location.href="admin.html"
-      }else{
-       
-         alert("incorrect data")
-      }
-   }else{
-    alert("fill data")
-   
-   }
+  if(em.value!=sem && ps.value!=sps){
+    alert("incorrect data")
+  }else{
+    window.location.href="admin.html"
+     
+  }
  }
 export{em,ps,login}
 
